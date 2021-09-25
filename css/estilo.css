@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@font-face {
+    font-family: 'Idroid';
+    src: url('../fontes/idroid.otf') format('opentype');
+}
+
+body {
+    background-color: #84E1AD;
+    font: normal normal 1em Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    position: relative;
+    height: 120px;
+    background-image: linear-gradient(to top, #1A5C38, #3CD782);
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+header > h1 {
+    font-weight: normal;
+    font-size: 1.6em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    margin: 0;
+}
+
+header > h2 {
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 1em;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+}
+
+img.burger {
+    visibility: hidden;
+    position: relative;
+    top: 0px;
+    display: block;
+    margin: 0 auto;
+    width: 35px;
+    opacity: 0.5;
+}
+
+#botao {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    display: block;
+    width: 35px;
+    z-index: 1;
+    opacity: 0;
+}
+
+nav > a {
+    font-size: .9em;
+    color: white;
+    text-decoration: none;
+}
+
+/* Somente para MOBILE */
+@media (max-width: 424px) {
+    
+    header > h1 {
+        font-size: 1.2em;;
+        padding-left: 100px;
+    }
+
+    header > h2 {
+        text-align: center;
+        margin-left: 100px;
+        margin-top: 8px;
+        font-size: .8em;   
+    }
+
+    img.burger {
+        visibility: visible;
+    }
+    
+    nav {
+        left: 15px;
+    }
+  
+    nav > a {
+        display: block;
+        font-size: .8em;
+        text-align: center;
+        margin-bottom: 5px;
+        background-color: #00000055;;
+        visibility: hidden;
+        padding: 2px;
+    }
+
+    #botao:checked ~ a {
+        visibility: visible;
+    }
+}/* FIM de Somente para MOBILE */
+
+/* Somente para TELA */
+@media (min-width: 425px) {
+    nav > a {
+        margin-right: 0;
+        padding: 10px 20px;
+    }
+}/* FIM de Somente para TELA */
+
+
+nav > a:hover {
+    background: #00000055;
+}
+
+@media (max-width: 830px) {
+    main {
+        width: auto
+    }
+}
+
+@media (min-width: 831px) {
+    main {
+        width: 800px;
+    }
+}
+
+main {
+    background-color: white;
+    padding: 20px 15px;
+    margin: 0 auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    article a {
+        color: #5A8970;
+        text-decoration: none;
+        background-color: #d4eee0;
+    }
+
+    article a::after {
+        content: ' 🔗';
+    }
+
+#principal > h1 {
+    font: normal normal 1.2em 'Idroid';
+    color: #40775A;
+    margin: 0;
+}
+
+#principal > h2 {
+    padding-left: 10px;
+    font: normal normal 1em 'Idroid';
+    color: #40775A;
+    background-color: #d4eee0;
+}
+
+section p {
+    text-indent: 25px;
+}
+
+img.img-ajustavel {
+    width: 100%;
+}
+
+/* Ajusta em 100% a imagem do bugdroid com janela abaixo de 300px */
+@media (max-width: 300px) {
+    img.img-ajustavel-300px {
+        width: 100%;
+    }
+}
+
+img.img-central {
+    display: block;
+    margin: 0 auto;
+}
+
+main strong {
+    color: #5A8970;
+}
+
+#margem-do-iframe {
+    display: block;
+    background-color: #1A5C38;
+    padding: 20px;
+    margin: 10px auto;
+}
+
+iframe {
+    aspect-ratio: 16 / 9;
+}
+
+#padding-sem-h1 {
+    padding: 5px 10px;
+}
+
+#aprender-mais {
+    background-color: #C5EBD6;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.4);
+}
+
+#aprender-mais > h1 {
+    display: block;
+    background-color: #748B7E;
+    margin: 0;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+}
+
+ul {
+    column-count: 2;
+    column-gap: 10px;
+}
+
+ul > li::before {
+    content: '✔️ ';
+}
+
+footer {
+    font-size: .8em;
+    text-align: center;
+    color: rgb(228, 227, 227);
+    background-color: #1A5C38;
+    padding: 3px;
+    margin-top: 10px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer strong {
+    color: white;
+    font-weight: 900;
+}
